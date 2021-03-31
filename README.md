@@ -21,6 +21,4 @@ All rights are reserved and it is NOT Open Source or Free.
 
 You cannot modify or redistribute this code without explicit permission from the copyright holder.
 
-You have no rights to do anything at all with this code. 
-
 In the particular case of GitHub, you can fork the repository and view the code, but nothing more.
