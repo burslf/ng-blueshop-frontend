@@ -1,0 +1,16 @@
+export const clothing = [
+    {id: '23fdhyh643fdg57jb3h4gjfmd', category: 'clothing', picture: '../../../assets/images/product2.jpg', title: 'Alabama', price: 9},
+    {id: '354eegrhhtfvgreghrggrghgt', category: 'clothing', picture: '../../../assets/images/product2.jpg', title: 'Tessa', price: 8},
+    {id: 'dfvfdsfdfesfddwasSRAftehg', category: 'clothing', picture: '../../../assets/images/product2.jpg', title: 'Minnesota', price: 9},
+    {id: 'sdgngmhjhdffefewfsZfvbtjt', category: 'clothing', picture: '../../../assets/images/product2.jpg', title: 'New York', price: 8},
+    {id: 'yeidehhkefyejfbefirugfhef', category: 'clothing', picture: '../../../assets/images/product2.jpg', title: 'Los Angeles', price: 9},
+    {id: 'dfehuewigfdklehfigefhjehf', category: 'clothing', picture: '../../../assets/images/product2.jpg', title: 'Dallas', price: 7},
+    {id: 'cndscavsehfewuifdebcbdkfd', category: 'clothing', picture: '../../../assets/images/product2.jpg', title: 'Milwaukee', price: 7},
+    {id: 'sdlfjcdkjsvfkdsfhkefekfhf', category: 'clothing', picture: '../../../assets/images/product2.jpg', title: 'Utah', price: 8},
+    {id: 'dwadw56376hwe3t73rvbh345h', category: 'collections', picture: '../../../assets/images/unsp3.jpg', title: 'NIMPORTEKWA', price: 8},
+    {id: 'errgwrwrgrgrrgtrghgbh337h', category: 'collections', picture: '../../../assets/images/unsp3.jpg', title: 'NIMPORTEKWA', price: 8},
+    {id: 'rgergrgytryj46v546v67t5gr', category: 'collections', picture: '../../../assets/images/unsp3.jpg', title: 'NIMPORTEKWA', price: 8},
+    {id: 'kjdyryfytetetw5r65655yghh', category: 'collections', picture: '../../../assets/images/unsp3.jpg', title: 'NIMPORTEKWA', price: 8},
+    {id: 'w4rfrggffdhhyyyyyyyyyyyhf', category: 'collections', picture: '../../../assets/images/unsp3.jpg', title: 'NIMPORTEKWA', price: 8},
+    {id: 'hjffgshjdwhfdhejyyr565677', category: 'collections', picture: '../../../assets/images/unsp3.jpg', title: 'NIMPORTEKWA', price: 8},
+  ]

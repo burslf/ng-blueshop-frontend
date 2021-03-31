@@ -1,0 +1,32 @@
+.carousel {
+    position: relative;
+    width: 100%;
+    height: auto;
+    & img {
+        width: 100%;
+        object-fit: contain;
+    }
+    
+    & .shop-now-btn{
+        font-size: 19px;
+        padding: 6px 13px;
+        border: 2px solid white;
+        color: white;
+        border-radius: 0;
+        align-self: center;
+        justify-content: end;
+        margin-bottom: 30px;
+        position: absolute;
+        bottom: 30px;
+        left: 75%;
+        transform: translateX(-50%);
+    }
+}
+
+@media only screen and (max-width:700px) {
+    .shop-now-btn{
+        font-size: 15px !important;
+        padding: 3px 7px !important;
+        margin: 0px !important;
+    }
+}

@@ -1,0 +1,29 @@
+.menu {
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    & * {
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+}
+.extras {
+    position: relative;
+    & .additional{
+        position: absolute;
+        right: 15px;
+        font-size: 18px;
+    }
+}
+
+.dropdown {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.dresses, .bottoms {
+    padding-left: 10px;
+}

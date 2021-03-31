@@ -1,0 +1,17 @@
+<mat-toolbar class="filter">
+    <button mat-button>Colour</button>
+    <button mat-button>Style</button>
+    <button mat-button>Size</button>
+</mat-toolbar>
+<h3 class="category-name">{{category}}</h3>
+<ul class="category-products">
+    <li *ngFor="let item of products">
+        <div class="pic" routerLink="" (click)="productDetails(item)">
+            <img src="{{item.picture}}" alt="">
+        </div>
+        <div class="infos">
+            <div class="name">{{item.title}}</div> <div class="price"><span class="currency">$</span><span class="price">{{item.price}}</span></div>
+        </div> 
+    </li>
+
+</ul>

@@ -1,0 +1,71 @@
+.filter {
+    background-color: transparent;
+}
+.category-name{
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+}
+// SKELTON FOR PRODUCTS GRID 
+.category-products {
+    list-style-type: none;
+    height: auto;
+    padding: 0px;
+    margin: 0px;
+    padding-top: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    & li {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        width: 23%;
+        margin-bottom: 15px;
+        & .pic > img {
+              width: 100%;
+            }
+        }
+        & .infos {
+            margin-top: 8px;
+            padding-left: 8px;
+            height: 23%;
+            display: flex;
+            flex-direction: column;
+            & .name {
+                font-size: 14px;
+                font-weight: 500;
+            }
+            & .price {
+                font-weight: 600;
+                font-size: 17px;
+            }
+        }
+    }
+    
+  @media only screen and (max-width:870px) {
+    .category-products {
+  
+        & li {
+            width: 32%;
+        }
+    }
+  }
+  
+  @media only screen and (max-width:700px) {  
+    .category-products {
+        justify-content: space-around;
+        & li {
+            width: 47%;
+        }
+    }
+  }
+  
+  @media only screen and (max-width:460px) {
+    .category-products {
+        justify-content: space-around;
+        & li {
+            width: 47%;
+        }
+    }
+  }

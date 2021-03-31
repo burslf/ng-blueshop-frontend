@@ -1,0 +1,66 @@
+<header class="header"> 
+    <mat-toolbar class="main">
+        <div class="left">
+            <button mat-icon-button class="burger" (click)="toggleSidenav()" aria-label="Example icon-button with heart icon">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <span class="currency">USD$</span>
+        </div>
+        <div class="center">
+            <span class="title" routerLink="/">BLUESHOP</span>
+        </div>
+        <div class="right">
+            <div class="account-logo-cntr cntr" routerLink="login">
+                <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+                    <mat-icon>person</mat-icon>
+                </button>
+            </div>
+            <div class="cart-logo-cntr cntr" routerLink="cart">
+                <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+                    <mat-icon>shopping_cart</mat-icon>
+                </button>
+                <div *ngIf="cart && cart.totalItems > 0" class="total-cart-items"><span>{{cart.totalItems}}</span></div>
+            </div>
+
+        </div>
+    </mat-toolbar>
+    <mat-toolbar class="menu">
+            <button mat-button [matMenuTriggerFor]="clothing">CLOTHINGS</button>
+                <mat-menu #clothing="matMenu">
+                    <button mat-menu-item routerLink="category/clothing">All</button>
+                    <button mat-menu-item>Corsets</button>
+                    <button mat-menu-item [matMenuTriggerFor]="dresses">Dresses</button>
+                    <button mat-menu-item>Denim</button>
+                    <button mat-menu-item>Tops</button>
+                    <button mat-menu-item [matMenuTriggerFor]="bottoms">Bottoms</button>
+                    <button mat-menu-item>Loungewear</button>
+                    <button mat-menu-item>Outerwear</button>
+                    <button mat-menu-item>Sweats</button>
+                </mat-menu>
+                 
+                <mat-menu #dresses="matMenu">
+                    <button mat-menu-item>Maxi Dresses</button>
+                    <button mat-menu-item>Midi Dresses</button>
+                    <button mat-menu-item>Mini Dresses</button>
+                </mat-menu>
+                  
+                <mat-menu #bottoms="matMenu">
+                    <button mat-menu-item>Trousers</button>
+                    <button mat-menu-item>Skirts</button>
+                    <button mat-menu-item>Shorts</button>
+                    <button mat-menu-item>Playsuits</button>
+                </mat-menu>
+                                
+                <button mat-button [matMenuTriggerFor]="collections">BY COLLECTIONS</button>
+                <mat-menu #collections="matMenu">
+                    <button mat-menu-item routerLink="category/collections">All</button>
+                    <button mat-menu-item>Summer Collection</button>
+                    <button mat-menu-item>Winter Collection</button>
+                    <button mat-menu-item>Spring Collection</button>
+                    <button mat-menu-item>Fall Collection</button>
+                </mat-menu>
+
+
+                <button mat-button routerLink="accessories">ACCESSORIES</button>
+    </mat-toolbar>
+</header>

@@ -1,0 +1,39 @@
+<div class="cart-title">
+    <h3 class="title">Cart</h3>
+    <span class="empty" *ngIf="items.products.length < 1">Your cart is empty</span>
+</div>
+<div class="cart-cntr" *ngFor="let item of items.products">
+    <div class="item-title-pic">
+        <span class="title">{{item.title}}</span>
+        <img src="{{item.picture}}" alt="">
+    </div>
+    <div class="item-infos">
+        <div class="item-price">
+            <div class="remove-item-btn">
+                <span (click)="removeItem(item.id, item.size)">X</span>
+            </div>
+            <div class="price">
+                <span class="currency">$</span> <span>{{item.price * item.quantity}} </span>
+            </div>
+        </div>
+        <div class="item-size-color-qty">
+            <div class="size"> <span class="uppercase">{{item.size}}</span></div>
+            <div class="color"> <span class="uppercase">black</span></div>
+            <div class="qty">
+                 <div class="select-qty">
+                    <mat-icon [ngClass]="{'hide': item.quantity < 2}" (click)="removeOne(item.quantity, item.id, item.size)"> remove_circle </mat-icon>
+                    <span>{{item.quantity}}</span> 
+                    <mat-icon (click)="addOne(item.id, item.size)"> add_circle </mat-icon>
+                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="go-to-shop" *ngIf="items.totalPrice < 1">
+    <button mat-raised-button routerLink="/category/clothing">Go to shop</button>
+</div>
+<div class="total-price" *ngIf="items.totalPrice > 0" >
+    <span class="total">Total: </span>
+    <span><span class="currency">$</span>{{items.totalPrice}}</span>
+</div>
+

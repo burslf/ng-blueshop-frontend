@@ -1,0 +1,53 @@
+<div class="product-cntr">
+    <div class="gallery">
+        <div class="aside-pics">
+            <ul>
+                <li> <img class="thumbnails" src="{{selectedProduct.picture}}" alt=""> </li>
+                <li> <img class="thumbnails"src="{{selectedProduct.picture}}" alt=""> </li>
+                <li> <img class="thumbnails"src="{{selectedProduct.picture}}" alt=""> </li>
+            </ul>
+        </div>
+        <div class="main-pic">
+            <img src="{{selectedProduct.picture}}" alt="">
+        </div>
+    </div>
+    <div class="aside">
+        <div class="name-price">
+            <span class="name">{{selectedProduct.title}}</span>
+            <span class="price">
+                <span class="currency">$</span>
+                {{selectedProduct.price}} 
+            </span>
+        </div>
+        <div class="colour-size">
+            <div class="colour">
+                <span>Black</span> 
+            </div>
+            <div class="size">
+                <div class="size-choosing">
+                    <div [ngClass]="{'selected-size': size.value == 'small'}">
+                        <span (click)="selectSize('small')">S</span>
+                    </div>
+                    <div [ngClass]="{'selected-size': size.value == 'medium'}">
+                        <span (click)="selectSize('medium')">M</span>
+                    </div>                    
+                    <div [ngClass]="{'selected-size': size.value == 'large'}">
+                        <span (click)="selectSize('large')">L</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="buy-like">
+            <div class="buy" (click)="addProduct()">
+                <button mat-raised-button (click)="openSnackBar()" [disabled]="!selectedSize" color="primary">ADD TO CART</button>
+            </div>
+            <div class="like">
+                <mat-icon>favorite_border</mat-icon>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="might-also-like">
+
+</div>

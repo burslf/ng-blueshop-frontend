@@ -1,0 +1,37 @@
+<div class="menu">
+    <button mat-button class="extras" (click)="toggleDropdown('clothing')">CLOTHINGS <span class="additional">+</span></button>
+        <div [ngClass]="{'show' : shows.clothing}" class="dropdown clothing">
+            <button mat-menu-item routerLink="category/clothing" (click)="toggleSidenav()">All</button>
+            <button mat-menu-item>Corsets</button>
+            <button mat-menu-item class="extras" (click)="toggleDropdown('dresses')">Dresses<span class="additional">+</span></button>
+                <div [ngClass]="{'show' : shows.dresses}" class="dropdown dresses">
+                    <button mat-menu-item> Maxi Dresses</button>
+                    <button mat-menu-item> Midi Dresses</button>
+                    <button mat-menu-item> Mini Dresses</button>
+                </div>
+            <button mat-menu-item>Denim</button>
+            <button mat-menu-item>Tops</button>
+            <button mat-menu-item class="extras" (click)="toggleDropdown('bottoms')">Bottoms<span class="additional">+</span></button>
+                <div [ngClass]="{'show' : shows.bottoms}" class="dropdown bottoms">
+                    <button mat-menu-item>Trousers</button>
+                    <button mat-menu-item>Skirts</button>
+                    <button mat-menu-item>Shorts</button>
+                    <button mat-menu-item>Playsuits</button>
+                </div>
+            <button mat-menu-item>Loungewear</button>
+            <button mat-menu-item>Outerwear</button>
+            <button mat-menu-item>Sweats</button>
+        </div>
+           
+     
+    <button mat-button class="extras" (click)="toggleDropdown('collections')">BY COLLECTIONS <span class="additional">+</span></button>
+        <div [ngClass]="{'show' : shows.collections}" class="dropdown collections">
+            <button mat-menu-item routerLink="category/collections" (click)="toggleSidenav()">All</button>
+            <button mat-menu-item>Summer Collection</button>
+            <button mat-menu-item>Winter Collection</button>
+            <button mat-menu-item>Spring Collection</button>
+            <button mat-menu-item>Fall Collection</button>
+        </div>
+
+    <button mat-button routerLink="accessories" (click)="toggleSidenav()">ACCESSORIES</button>
+</div>
