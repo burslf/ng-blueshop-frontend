@@ -1,4 +1,6 @@
 # Blueshop
+View deployed app : https://yoyo-shop.netlify.app
+
 An e-commerce CMS solution made with Angular for a fast, simple and powerful shop.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.2.
 
