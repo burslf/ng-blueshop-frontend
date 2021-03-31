@@ -15,7 +15,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 You can clone and run the backend repository (https://github.com/burslf/ng-blueshop-backend) or run `ng-build --prod` for the deployed server.
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-!Important¡
+## Important !
 
 All rights are reserved and it is NOT Open Source or Free. 
 
