@@ -1,4 +1,6 @@
 # Blueshop
+(The project is just not completed at all)
+
 View deployed app : https://yoyo-shop.netlify.app
 
 An e-commerce CMS solution made with Angular for a fast, simple and powerful shop.
