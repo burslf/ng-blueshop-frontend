@@ -18,18 +18,21 @@ export class ClothingComponent implements OnInit {
   public category:any = null
   constructor(private router: Router, private route: ActivatedRoute, private scrollPosition:ScrollPositionService) {
     this.route.url.subscribe(url => {
-      this.category = url[1].path
+      this.category = `${url[1].path}`
       this.products = clothing.filter(p=> p.category == this.category)
+      console.log(this.category)
+      if(this.category == 'all'){
+        this.products = clothing
+      }
     })
   }
   
   ngOnInit(): void {
-    this.scrollPosition._position.subscribe(res => {
-    })
     window.scrollTo(0, 0)
+    console.log(this.products)
   }
 
-  productDetails(product:any) { 
-    this.router.navigate([`/clothing/product`], { queryParams: {id: product.id}});
+  productDetails(product:any, category:any) { 
+    this.router.navigate([`/collection/${category}/product`], { queryParams: {id: product.id}});
   }
 }

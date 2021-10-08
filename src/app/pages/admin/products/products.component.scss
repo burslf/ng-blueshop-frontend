@@ -1,0 +1,12 @@
+.app-admin-products:host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    & .new-product-btn {
+        background-color: gray;
+        color: white;
+        font-weight: 700;
+    }
+}

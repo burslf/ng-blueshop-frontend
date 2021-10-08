@@ -1,53 +1,65 @@
 .form-cntr {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    min-width: 230px;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  min-width: 230px;
+  margin: 0 auto;
+  margin-top: 50px !important;
+  & input {
+    margin-top: 15px;
+  }
+  & h3 {
+    margin-top: 35px !important;
     margin: 0 auto;
-    margin-top: 50px !important;
-    & input {
-        margin-top: 15px;
-    }
-    & h3 {
-        margin-top: 35px !important;
-        margin: 0 auto;
-    }
-    & button {
-        margin-top: 20px;
-        background-color: #000000;
-    }
+  }
+  & button {
+    margin-top: 20px;
+    background-color: #000000;
+  }
 }
 
 .logged-in {
-    width: 100%;
-    display: flex;
-    flex-direction:column;
-    align-items: center;
-    & h3 {
-        text-align: center;
-    }
-    & button {
-        background-color: #000000;
-        color: #ffffff;
-        border-radius: 0px;
-        width: 100px;
-        margin-bottom: 15px;
-    }
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  & h3 {
+    text-align: center;
+  }
+  & button {
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 0px;
+    width: 100px;
+    margin-bottom: 15px;
+  }
 }
-::ng-deep .mat-form-field.mat-focused .mat-form-field-label{
-    color:#000000 !important;
+::ng-deep .loading {
+  position: absolute !important;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%);
+  & > svg > circle {
+    stroke: #000000 !important;
   }
+}
 
-  ::ng-deep .mat-form-field.mat-focused .mat-form-field-ripple {
-      background-color: #000000 !important;
-  }
-  ::ng-deep .mat-form-field-appearance-legacy .mat-form-field-label{
-    color:#000000 !important;
-  }
-  
-  ::ng-deep .mat-form-field-underline{
-  
-    background-color:#000000 !important;
-  }
+::ng-deep .mat-input-element {
+  caret-color: #000000 !important;
+}
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+  caret-color: #000000 !important;
+  color: #000000 !important;
+}
 
-  
+::ng-deep .mat-form-field.mat-focused .mat-form-field-ripple {
+  caret-color: #000000 !important;
+  background-color: #000000 !important;
+}
+::ng-deep .mat-form-field-appearance-legacy .mat-form-field-label {
+  color: #000000 !important;
+}
+
+::ng-deep .mat-form-field-underline {
+  background-color: #000000 !important;
+}

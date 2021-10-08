@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { mymenu, NavItem } from 'mymenu';
 import { SidenavService } from '../navbar/sidenav.service';
 import { ShowDropdown } from './sidenav-dropdown'
-import {menu} from '../../../../mymenu'
 
 @Component({
   selector: 'app-sidenav',
@@ -10,27 +10,16 @@ import {menu} from '../../../../mymenu'
 })
 export class SidenavComponent implements OnInit {
   shows: ShowDropdown = {
-      "clothing" : false,
-      "collections" : false,
+      "Clothing" : false,
+      "By collection" : false,
       "dresses": false,
       "bottoms": false
   }
-  public menu = menu
-  
+  navItems: NavItem[] = mymenu
+
   constructor(private sidenav: SidenavService) { }
   ngOnInit(): void {
-    for(let category of menu) {
-      console.log('P A R E N T')
-      console.log(category.name)
-      for(let children of category.children) {
-        console.log('C H I L D S')
-        console.log(children.name)
-        if(children.children) {
-          console.log('S U B    C H I L D R E N ');
-          children.children.forEach(child => console.log(child.name))
-        }
-      }
-    }
+  
   }
 
   toggleSidenav(){

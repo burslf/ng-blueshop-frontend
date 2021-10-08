@@ -16,7 +16,7 @@
             <span class="name">{{selectedProduct.title}}</span>
             <span class="price">
                 <span class="currency">$</span>
-                {{selectedProduct.price}} 
+                {{selectedProduct.pricing.price}} 
             </span>
         </div>
         <div class="colour-size">
@@ -25,15 +25,15 @@
             </div>
             <div class="size">
                 <div class="size-choosing">
-                    <div [ngClass]="{'selected-size': size.value == 'small'}">
-                        <span (click)="selectSize('small')">S</span>
+                    <div *ngFor="let s of selectedProduct.sizes" [ngClass]="{'selected-size': size.value == s}">
+                        <span (click)="selectSize(s)">{{s}}</span>
                     </div>
-                    <div [ngClass]="{'selected-size': size.value == 'medium'}">
+                    <!-- <div [ngClass]="{'selected-size': size.value == 'medium'}">
                         <span (click)="selectSize('medium')">M</span>
                     </div>                    
                     <div [ngClass]="{'selected-size': size.value == 'large'}">
                         <span (click)="selectSize('large')">L</span>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

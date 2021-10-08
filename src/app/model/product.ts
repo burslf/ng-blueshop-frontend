@@ -1,4 +1,3 @@
-import { CheckboxControlValueAccessor } from "@angular/forms"
 interface ShippingDetails {
     weight: number,
     width: number,
@@ -11,44 +10,88 @@ interface Pricing {
     currency: string
 }
 
-interface Options {
-
-}
 interface Quantity {
-  color:string
+  color: string;
+  size: string,
+  quantity: number
 }
+
 export interface Product {
     id: string
     sku?: string,
     title: string,
+    category: string,
+    picture: string
     description?: string,
     shipping_details?: ShippingDetails,
-    quantity?: number,
     pricing: Pricing,
-    options?: Options,
-    picture: string
-}
+    sizes: string[],
+    colors?: string[],
+    quantity?: Quantity[],
+
+  }
 
 const productExample: Product = {
   id: '5324nhjfb32h3gf353bfgd23',
-  sku: "111445GB3",
+  sku: "TSH00WHI",
   title: "Simple T-Shirt",
+  category: '',
+  picture: '',
   description: "A t-shirt made with 100% cotton ...",
-  shipping_details: {
-    weight: 350,
-    width: 10,
-    height: 10,
-    depth: 1
-  },
-  quantity: 99,
+  // shipping_details: {
+  //   weight: 350,
+  //   width: 10,
+  //   height: 10,
+  //   depth: 1
+  // },
   pricing: {
-    price: 1000,
-    currency: "USD"
+    price: 29.99,
+    currency: "ILS"
   },
-  options: {
-
-  },
-  picture: ''
+  sizes: ['XS', 'S', 'M', 'L', 'XL'],
+  colors: ['black', 'white'],
+  quantity: [
+    {
+      color: 'black',
+      size : 'S',
+      quantity: 25,
+    },
+    {
+      color: 'black',
+      size: 'M',
+      quantity: 25
+    },
+    {
+      color: 'black',
+      size: 'L',
+      quantity: 25
+    },
+    {
+      color: 'black',
+      size: 'XL',
+      quantity: 25
+    },
+    {
+      color: 'white',
+      size : 'S',
+      quantity: 25,
+    },
+    {
+      color: 'white',
+      size: 'M',
+      quantity: 25
+    },
+    {
+      color: 'white',
+      size: 'L',
+      quantity: 25
+    },
+    {
+      color: 'white',
+      size: 'XL',
+      quantity: 25
+    }, 
+  ]
 }
 
 

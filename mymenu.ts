@@ -1,43 +1,78 @@
-export const menu = [
+export interface NavItem {
+    displayName: string;
+    route?: string;
+    children?: NavItem[];
+}
+
+
+export const mymenu: NavItem[] = [
     {
-        name: "clothings",
+        displayName: "Clothing",
         children: [
-            { name: "all", path: "clothing/all"},
-            { name: "corsets", path: "clothing/corsets"},
-            { name: "dresses", children: [
-                { name:"maxi dresses", path: "clothing/dresses/maxi-dresses"},
-                { name:"midi dresses", path: "clothing/dresses/midi-dresses"},
-                { name:"mini dresses", path: "clothing/dresses/mini-dresses"}
-            ]},
-            { name: "denim", path: "clothing/denim"},
-            { name: "tops", path: "clothing/tops"},
-            { name: "bottoms", children: [
-                { name:"trousers", path: "clothing/bottoms/trousers"},
-                { name:"skirts", path: "clothing/bottoms/skirts"},
-                { name:"shorts", path: "clothing/bottoms/shorts"},
-                { name:"playsuits", path: "clothing/bottoms/playsuits"},
-            ]},
-            { name: "loungewear", path: "clothing/loungewear"},
-            { name: "outerwear", path: "clothing/outerwear"},
-            { name: "sweats", path: "clothing/sweats"}
-         ],
+            {
+                displayName: "All",
+                route: "collection/all",
+            },
+            {
+                displayName: "Corsets",
+                route: "collection/corsets"
+            },
+            {
+                displayName: "Dresses",
+                children: [
+                    {
+                        displayName: "Maxi dresses",
+                        route: "collection/maxi-dresses"
+                    },
+                    {
+                        displayName: "Midi dresses",
+                        route: "collection/midi-dresses"
+                    },
+                    {
+                        displayName: "Mini dresses",
+                        route: "collection/mini-dresses"
+                    },
+                ],
+            },
+            {
+                displayName: "Denim",
+                route: "collection/denim"
+            },
+            {
+                displayName: "Tops",
+                route: "collection/tops"
+            },
+            {
+                displayName: "Bottoms",
+                route: "collection/bottoms"
+            },
+            {
+                displayName: "Loungewear",
+                route: "collection/loungewear"
+            }]
     },
     {
-        name: "by collection",
+        displayName: "By Collection",
         children: [
-            { name: "all", path: "collection/all"},
-            { name: "summer collection", path: "collection/summer-collection"},
-            { name: "winter collection", path: "collection/winter-collection"},
-            { name: "spring collection", path: "collection/spring-collection"},
-            { name: "fall collection", path: "collection/fall-collection"}
-        ]
+            {
+                displayName: "Summer collection",
+                route: "collection/summer",
+            },
+            {
+                displayName: "Winter collection",
+                route: "collection/winter"
+            },
+            {
+                displayName: "Spring collection",
+                route: "collection/spring"
+            },
+            {
+                displayName: "Fall collection",
+                route: "collection/fall"
+            }]
     },
     {
-        name: "accessories",
-        children: [
-            { name: "all", path: "accessories/all"},
-            { name: "glasses", path: "accessories/glasses"},
-            { name: "necklace", path: "accessories/necklace"},
-        ]
-    },
-]
+        displayName: "Accessories",
+        route: "collection/accessories"
+    }
+];

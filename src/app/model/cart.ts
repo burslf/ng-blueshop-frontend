@@ -3,7 +3,7 @@
  */
 import {Product} from "./product";
 
-interface ProductCart {
+interface ProductOrder {
         id: string,
         title: string,
         picture: string,
@@ -13,15 +13,13 @@ interface ProductCart {
 }
 
 export interface Cart {
-    products:ProductCart[],
+    products:ProductOrder[],
     totalItems: number,
     totalPrice: number
 }
 
 export const cart: Cart = {
-    products: [
-        
-    ],
+    products: [],
     totalItems: 0,
     totalPrice: 0,
 }

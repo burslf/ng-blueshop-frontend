@@ -17,7 +17,7 @@ export class CartService {
     
     constructor(private cookie: CookieService) {
         if(this.cookie.get('cart')) {
-            console.log('exist cookie')
+            console.log('exist cart in cookie')
             const cookieCart = this.cookie.get('cart')
             const parsedCart = JSON.parse(cookieCart)
             this._cart.next(parsedCart)

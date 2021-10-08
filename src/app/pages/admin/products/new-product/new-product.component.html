@@ -1,0 +1,56 @@
+<mat-icon routerLink="/admin/products" class="previous-btn">arrow_back</mat-icon>
+
+<form [formGroup]="productForm" class="product-form">
+  
+  <input type="file" #uploadPicture [ngStyle]="{'display':'none'}">
+  <button type="button" (click)="uploadPicture.click()" mat-fab>
+    <mat-icon>camera_enhance</mat-icon>
+  </button>
+  <div class="upload-pic-ctnr" >
+  <div *ngFor="let p of []" class="upload-pic">
+
+  </div>
+  </div>
+
+  <mat-form-field class="" appearance="standard">
+        <mat-label>Product title</mat-label>
+        <input matInput type="text" formControlName="title">
+        <button *ngIf="productForm.get('title')?.value!" matSuffix mat-icon-button aria-label="Clear" (click)="productForm.patchValue({'title' : ''})">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+
+      <mat-form-field class="" appearance="standard">
+        <mat-label>SKU</mat-label>
+        <input matInput type="text" formControlName="sku">
+        <button type="button" *ngIf="productForm.get('sku')?.value!" matSuffix mat-icon-button aria-label="Clear" (click)="productForm.patchValue({'sku' : ''})">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+    
+      <mat-form-field appearance="standard">
+        <mat-label>Category</mat-label>
+        <mat-select>
+          <mat-option value="one">First option</mat-option>
+          <mat-option value="two">Second option</mat-option>
+          <mat-option value="one">First option</mat-option>
+          <mat-option value="two">Second option</mat-option>
+          <mat-option value="one">First option</mat-option>
+          <mat-option value="two">Second option</mat-option>
+          <mat-option value="one">First option</mat-option>
+          <mat-option value="two">Second option</mat-option>
+          
+        </mat-select>
+      </mat-form-field>
+      
+      <mat-form-field appearance="standard">
+        <mat-label>Description</mat-label>
+        <textarea matInput></textarea>
+      </mat-form-field>
+
+      <mat-form-field appearance="standard">
+        <mat-label>Price</mat-label>
+        <input matInput type="number" class="example-right-align" placeholder="0">
+        <span matSuffix>₪&nbsp;</span>
+      </mat-form-field>
+</form>
