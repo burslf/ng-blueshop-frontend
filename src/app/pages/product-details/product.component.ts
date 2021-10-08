@@ -28,6 +28,7 @@ export class ProductComponent implements OnInit {
 
   ngOnInit(): void {
     console.log(this.selectedSize)
+    console.log(this.selectedProduct)
     this.cartService._cart.subscribe(res => this.cart = res)
   }
   openSnackBar(){
@@ -55,7 +56,7 @@ export class ProductComponent implements OnInit {
         const newProduct = {
           products: mappedProduct,
           totalItems: this.cartService.cart.totalItems + 1,
-          totalPrice: this.cartService.cart.totalPrice + this.selectedProduct.price
+          totalPrice: this.cartService.cart.totalPrice + this.selectedProduct.pricing.price
         }
         this.cookie.set('cart', JSON.stringify(newProduct))
         this.cartService.setProduct(newProduct)
@@ -63,14 +64,15 @@ export class ProductComponent implements OnInit {
         const newProduct = {
           products: [...this.cartService.cart.products, {
             id: this.selectedProduct.id,
+            product_id: this.selectedProduct.id,
             title: this.selectedProduct.title,
-            price: this.selectedProduct.price,
+            price: this.selectedProduct.pricing.price,
             quantity: 1,
             size: this.selectedSize,
             picture: this.selectedProduct.picture,
           }],
           totalItems: this.cartService.cart.totalItems + 1,
-          totalPrice: this.cartService.cart.totalPrice + this.selectedProduct.price
+          totalPrice: this.cartService.cart.totalPrice + this.selectedProduct.pricing.price
         }
         this.cartService.setProduct(newProduct)
         this.cookie.set('cart', JSON.stringify(newProduct))

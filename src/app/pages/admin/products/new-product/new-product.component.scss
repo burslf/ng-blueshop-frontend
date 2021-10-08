@@ -1,0 +1,52 @@
+.app-new-product:host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    & .product-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        margin-top: 30px;
+        & .mat-form-field {
+          width: 100%
+        }
+        & .upload-pic-ctnr {
+          margin-top: 20px;
+          width: 100%;
+          display: flex;
+          justify-content: flex-start;
+          overflow-x: auto;
+          & .upload-pic {
+            // border-radius: 50%;
+            margin: 2px;
+            min-width: 90px;
+            border: 2px solid black;
+            height: 90px;
+          }
+        }
+
+    }
+    & .previous-btn{
+        margin-top: 20px;
+        cursor: pointer;
+    }
+}
+
+.example-right-align {
+    text-align: right;
+    position: relative;
+    right: 10px;
+}
+
+  input.example-right-align::-webkit-outer-spin-button,
+input.example-right-align::-webkit-inner-spin-button {
+  display: none;
+}
+
+input.example-right-align {
+    -moz-appearance: textfield;
+  }
+  

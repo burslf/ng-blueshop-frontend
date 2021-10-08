@@ -6,11 +6,11 @@
 <h3 class="category-name">{{category}}</h3>
 <ul class="category-products">
     <li *ngFor="let item of products">
-        <div class="pic" routerLink="" (click)="productDetails(item)">
+        <div class="pic" routerLink="" (click)="productDetails(item, item.category)">
             <img src="{{item.picture}}" alt="">
         </div>
         <div class="infos">
-            <div class="name">{{item.title}}</div> <div class="price"><span class="currency">$</span><span class="price">{{item.price}}</span></div>
+            <div class="name">{{item.title}}</div> <div class="price"><span class="currency">₪</span><span class="price">{{item.pricing.price}}</span></div>
         </div> 
     </li>
 
